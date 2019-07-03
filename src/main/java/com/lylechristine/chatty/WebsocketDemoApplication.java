@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChattyApplication {
+public class WebsocketDemoApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ChattyApplication.class, args);
-    }
-
+	public static void main(String[] args) {
+		SpringApplication.run(WebsocketDemoApplication.class, args);
+	}
 }

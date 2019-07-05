@@ -4,4 +4,6 @@ A chat application built with Spring Boot project. Based on the example at www.c
 <br>
 Live version deployed on OpenShift at http://chatty-lyle-apps.apps.us-west-2.online-starter.openshift.com
 <br>
+<br>
+<br>
 ![Chatty](screenshot.png)

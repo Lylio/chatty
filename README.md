@@ -2,7 +2,7 @@
 A Spring Boot chat application. Based on the example at www.callicoder.com/spring-boot-websocket-chat-example/
 <br>
 <br>
-Live version deployed on OpenShift at http://chatty-lyle-apps.apps.us-west-2.online-starter.openshift.com
+Live version deployed on OpenShift at http://chatty-spring-boot.b9ad.pro-us-east-1.openshiftapps.com/
 <br>
 <br>
 <br>

@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>websocket-demo</artifactId>
+	<artifactId>chatty</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>websocket-demo</name>
-	<description>Spring Boot WebSocket Chat Demo</description>
+	<name>chatty</name>
+	<description>Spring Boot WebSocket Chat App</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -78,9 +78,9 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.0</version>
 				<configuration>
-					<!-- replace `callicoder` with your docker id-->
-					<repository>callicoder/spring-boot-websocket-chat-demo</repository>
+					<repository>lylio/chatty</repository>
 					<tag>${project.version}</tag>
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>

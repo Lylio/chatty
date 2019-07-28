@@ -17,5 +17,5 @@ ARG JAR_FILE=target/chatty-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} chatty.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/websocket-demo.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/chatty.jar"]
 

@@ -7,3 +7,12 @@ Live version deployed on OpenShift at http://chatty-spring-boot.b9ad.pro-us-east
 <br>
 <br>
 ![Chatty](screenshot.png)
+<br>
+<br>
+##Start-up script
+1. `sh startup.sh`
+2. Open browser at http://localhost:8080
+
+##Maven start-up
+1. `mvn spring-boot:run`
+2. Open browser at http://localhost:8080

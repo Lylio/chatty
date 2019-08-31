@@ -6,6 +6,7 @@ A Spring Boot chat application. Based on the example at www.callicoder.com/sprin
 <br>
 <br>
 Live version deployed on OpenShift at http://chatty-spring-boot.b9ad.pro-us-east-1.openshiftapps.com/
+<br>(open link in two different tabs/browsers/devices to demonstrate).
 <br>
 <br>
 <br>

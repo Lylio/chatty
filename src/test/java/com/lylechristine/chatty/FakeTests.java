@@ -11,8 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class FakeTests {
 
     @Test
-    public void sum() {
-        assertEquals(5, 5);
+    public void equals() {
+        assertEquals(6, 6);
     }
 
 }

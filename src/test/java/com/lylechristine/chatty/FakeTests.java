@@ -12,7 +12,7 @@ public class FakeTests {
 
     @Test
     public void sum() {
-        assertEquals(5, 4);
+        assertEquals(5, 5);
     }
 
 }

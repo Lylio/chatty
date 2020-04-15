@@ -17,4 +17,3 @@ A Spring Boot chat application. Based on the example at www.callicoder.com/sprin
 1. `./mvnw spring-boot:run`
 2. Open browser at http://localhost:8080
 3. Open second browser at http://localhost.com:8080 to demonstrate
-I DO WANT THIS LINE AND THE FOLLOWING LINES THOUGH! Test successful! Well done. Now write a script to remove this.

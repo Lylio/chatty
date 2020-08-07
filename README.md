@@ -4,8 +4,7 @@
 ## Built with Spring Boot
 
 ### Description
-A Spring Boot chat application.
-www.callicoder.com/spring-boot-websocket-chat-example
+A Spring Boot chat application. Demo can be found at https://chatty-happy.herokuapp.com/
 
 #### Docker Launch
 1. `docker build -t chatty .`

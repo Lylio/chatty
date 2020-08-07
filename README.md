@@ -1,19 +1,19 @@
+![](https://github.com/Lylio/helper-repo/blob/master/img/logos/java.png?raw=true)
+![](https://github.com/Lylio/helper-repo/blob/master/img/logos/spring-boot.png?raw=true)
 # Chatty
-![Logos](img/logos.png)
-<br>
-<br>
+## Built with Spring Boot
+
+### Description
 A Spring Boot chat application.
-<br>www.callicoder.com/spring-boot-websocket-chat-example
-<br>
-<br>
-![Chatty](img/screenshot.png)
-<br>
-### Linux / Mac
+www.callicoder.com/spring-boot-websocket-chat-example
+
+#### Docker Launch
 1. `docker build -t chatty .`
 2. `docker run -p 9005:8080 chatty:latest`
-3. http://localhost:9005
+3. Open first tab/browser at http://localhost:9005
 4. Open second tab/browser at http://localhost:9005 to demonstrate chat functionality.
-### Windows
+
+#### Maven Launch
 1. `./mvnw spring-boot:run`
-2. Open browser at http://localhost:8080
+2. Open first tab/browser at http://localhost:8080
 3. Open second tab/browser at http://localhost.com:8080 to demonstrate chat functionality.

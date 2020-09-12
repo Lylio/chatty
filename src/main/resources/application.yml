@@ -1,4 +1,7 @@
+# BANNER
 spring.banner.location: classpath:banner.txt
+
+# ENDPOINT MANAGEMENT
 management:
   endpoint:
     info:

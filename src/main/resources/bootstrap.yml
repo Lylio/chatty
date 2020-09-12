@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: chatty-services
+  cloud:
+    config:
+      uri: https://chinook-services.herokuapp.com

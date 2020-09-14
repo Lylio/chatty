@@ -20,4 +20,9 @@ management:
       exposure:
         include: "*"
 
+# LOGGING
+logging:
+  file:
+    name: /home/lylio/Documents/logs/chatty.log
+
 

@@ -3,7 +3,7 @@ spring:
   application:
     name: chatty-services
 
-# SPRING CLOUD CONFIG URI
+  # SPRING CLOUD CONFIG URI
   cloud:
     config:
       uri: https://chinook-services.herokuapp.com

@@ -1,3 +1,7 @@
+# LOGGING
+logging:
+  file: /home/lylio/Documents/logs/chatty.log
+
 # BANNER
 spring.banner.location: classpath:banner.txt
 
@@ -20,9 +24,5 @@ management:
       exposure:
         include: "*"
 
-# LOGGING
-logging:
-  file:
-    name: /home/lylio/Documents/logs/chatty.log
 
 

@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy Docker image') {
+        stage('Publish image to DockerHub') {
             steps {
                 script {
                     docker.withRegistry( '', registryCredential ) {
@@ -41,19 +41,19 @@ pipeline {
                 }
             }
         }
-        stage('Cleanup - Docker rmi') {
+        stage('Docker cleanup') {
             steps {
                 sh "docker rmi $registry:$BUILD_NUMBER"
             }
         }
-        stage("Build Maven project") {
+        stage("Package Maven project") {
             steps {
                 script {
                     sh "mvn package -DskipTests=true"
                 }
             }
         }
-        stage("Publish to Nexus") {
+        stage("Publish artefacts to Nexus") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";

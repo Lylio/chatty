@@ -18,60 +18,42 @@ pipeline {
         dockerImage = ''
     }
     stages {
-        stage("Clone code from VCS") {
+        stage("Clone code from GitHub") {
             steps {
                 script {
                     git 'https://github.com/Lylio/chatty-services.git';
                 }
             }
         }
-
-        stage('Docker Build') {
-                steps {
-                    script {
-
-                        dockerImage = docker.build registry + ":$BUILD_NUMBER"
-
-                                }
-                            }
-                        }
-
-                        stage('Deploy our image') {
-
-                                    steps {
-
-                                        script {
-
-                                            docker.withRegistry( '', registryCredential ) {
-
-                                                dockerImage.push()
-
-                                            }
-
-                                        }
-
-                                    }
-
-                                }
-
-                                stage('Cleaning up') {
-
-                                    steps {
-
-                                        sh "docker rmi $registry:$BUILD_NUMBER"
-
-                                    }
-
-                                }
-
-        stage("Maven Build") {
+        stage('Build Docker image') {
+            steps {
+                script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+        }
+        stage('Deploy Docker image') {
+            steps {
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+        stage('Cleanup - Docker rmi') {
+            steps {
+                sh "docker rmi $registry:$BUILD_NUMBER"
+            }
+        }
+        stage("Build Maven project") {
             steps {
                 script {
                     sh "mvn package -DskipTests=true"
                 }
             }
         }
-        stage("Publish to Nexus Repository Manager") {
+        stage("Publish to Nexus") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";

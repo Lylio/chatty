@@ -6,11 +6,16 @@ pipeline {
         maven "Maven"
     }
     environment {
+        //Nexus
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "3.250.12.89:8081"
         NEXUS_REPOSITORY = "maven-nexus-repo"
         NEXUS_CREDENTIAL_ID = "nexus-user-credentials"
+        // DockerHub
+        registry = "e.g. lylio/chatty"
+        registryCredential = 'dockerhub_id'
+        dockerImage = ''
     }
     stages {
         stage("Clone code from VCS") {
@@ -20,6 +25,45 @@ pipeline {
                 }
             }
         }
+
+    stage('Docker Build') {
+        steps {
+            script {
+
+                dockerImage = docker.build registry + ":$BUILD_NUMBER"
+
+                        }
+                    }
+                }
+
+                stage('Deploy our image') {
+
+                            steps {
+
+                                script {
+
+                                    docker.withRegistry( '', registryCredential ) {
+
+                                        dockerImage.push()
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        stage('Cleaning up') {
+
+                            steps {
+
+                                sh "docker rmi $registry:$BUILD_NUMBER"
+
+                            }
+
+                        }
+
         stage("Maven Build") {
             steps {
                 script {

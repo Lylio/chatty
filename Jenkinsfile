@@ -9,7 +9,7 @@ pipeline {
         //Nexus
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "3.250.12.89:8081"
+        NEXUS_URL = "54.154.221.150:8081"
         NEXUS_REPOSITORY = "maven-nexus-repo"
         NEXUS_CREDENTIAL_ID = "nexus-user-credentials"
         // DockerHub

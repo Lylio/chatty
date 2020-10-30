@@ -13,7 +13,7 @@ pipeline {
         NEXUS_REPOSITORY = "maven-nexus-repo"
         NEXUS_CREDENTIAL_ID = "nexus-user-credentials"
         // DockerHub
-        registry = "lylio/chatty"
+        registry = "lylio/chatty-services"
         registryCredential = 'dockerhub_id'
         dockerImage = ''
     }

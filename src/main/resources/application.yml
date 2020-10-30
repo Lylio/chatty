@@ -1,6 +1,6 @@
 # LOGGING
 logging:
-  file: /home/lylio/Documents/logs/chatty-services.log
+  file: /home/lylio/Documents/logs/chatty.log
 
 # BANNER
 spring.banner.location: classpath:banner.txt

@@ -4,7 +4,7 @@
 ## Built with Spring Boot
 
 ### Description
-A Spring Boot chat application. Demo can be found at http://chatty.lylio.tech/
+A Spring Boot chat application. Demo can be found at https://chatty-services.herokuapp.com/
 
 #### Docker Launch
 1. `docker build -t chatty-services .`

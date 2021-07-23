@@ -26,40 +26,12 @@
 
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/com.spotify/dockerfile-maven-plugin -->
-		<dependency>
-    			<groupId>com.spotify</groupId>
-    			<artifactId>dockerfile-maven-plugin</artifactId>
-    			<version>1.4.13</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-prometheus</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
-
-		<!-- RabbitMQ Starter Dependency (Not required if you're using the simple in-memory broker for STOMP) -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-
-		<!-- Following dependency is required for Full Featured STOMP Broker Relay -->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-reactor-netty</artifactId>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

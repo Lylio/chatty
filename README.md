@@ -3,7 +3,8 @@
 ## Built with Spring Boot
 
 ### Description
-A Spring Boot MVC chat application. Demo can be found at https://chatty-services.herokuapp.com/
+A Spring Boot MVC chat application. Demo can be found at https://chatty-services.herokuapp.com/  
+(**NOTE** - Apps hosted on the free tier of Heroku can take 30-60 seconds to load.)
 
 #### Docker Launch
 1. `docker build -t chatty-services .`

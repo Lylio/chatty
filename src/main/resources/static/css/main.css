@@ -136,7 +136,7 @@ button.accent {
 
 #chat-page {
     position: relative;
-    height: 100%;
+    height: 80%;
 }
 
 .chat-container {
@@ -242,6 +242,24 @@ button.accent {
     font-weight: 500;
 }
 
+.chatty-small-logo-container {
+    text-align:center;
+    padding-top: 25px;
+    opacity: 1;
+}
+
+.chatty-small-logo {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.chatty-small-logo:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
 .connecting {
     padding-top: 5px;
     text-align: center;
@@ -259,6 +277,19 @@ button.accent {
         margin-right: 10px;
         margin-top: 10px;
     }
+
+    .chatty-small-logo {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .chatty-small-logo:hover {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -272,6 +303,7 @@ button.accent {
         margin-right: 15px;
         padding: 25px;
     }
+
 
     #chat-page ul {
         height: calc(100% - 120px);
@@ -295,5 +327,15 @@ button.accent {
 
     .chat-header h2 {
         font-size: 1.1em;
+    }
+
+    .chatty-small-logo {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .chatty-small-logo:hover {
     }
 }

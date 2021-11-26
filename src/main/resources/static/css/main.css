@@ -39,6 +39,20 @@ body:before {
     clear: both;
 }
 
+.copyright {
+    text-align: center;
+    font-size: small;
+    color: #c8c8c8;
+}
+    .copyright a {
+        text-decoration-line: none;
+        color: #c8c8c8;
+
+    }
+    .copyright a:hover {
+         color: #b340b3;
+     }
+
 .hidden {
     display: none;
 }

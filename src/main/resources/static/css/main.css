@@ -43,16 +43,16 @@ body:before {
     text-align: center;
     font-size: small;
     font-weight: bold;
-    color: #563209;
+    color: #095613;
 }
     .copyright a {
         text-decoration-line: none;
         font-weight: bold;
-        color: #563209;
+        color: #095613;
 
     }
     .copyright a:hover {
-         color: #85541b;
+         color: #118d21;
      }
 
 .hidden {

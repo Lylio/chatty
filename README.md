@@ -1,9 +1,12 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/spring-boot.png?raw=true)
 # Chatty
-## Built with Spring Boot
 
 ### Description
-A Spring Boot MVC chat application. Demo can be found hosted on Heroku: https://chatty-services.herokuapp.com/  
+A Spring Boot chat application. Demo can be found hosted on Heroku: https://chatty-services.herokuapp.com/  
+
+### Tech Stack
+- Spring Boot (JDK 8)
+- Maven
 
 #### Docker Launch
 1. `docker build -t chatty .`

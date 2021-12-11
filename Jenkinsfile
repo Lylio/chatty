@@ -1,7 +1,7 @@
 node {
 	def app
 	def image = 'registry.hub.docker.com/lylio/chatty'
-	def branch = 'main'
+	def branch = 'master'
 
 	try {
 		stage('Clone repository') {

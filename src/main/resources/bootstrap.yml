@@ -6,4 +6,4 @@ spring:
 # SPRING CLOUD CONFIG SERVER URI
   cloud:
     config:
-      uri: https://chinook-services.herokuapp.com
+      uri: https://configaro.herokuapp.com

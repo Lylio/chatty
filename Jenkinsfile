@@ -23,8 +23,10 @@ node {
         }
 
         stage("Quality gate") {
-
+                sleep(time:3,unit:"SECONDS")
+                timeout(time: 10, unit: 'MINUTES') {
                 waitForQualityGate abortPipeline: true
+                }
         }
 
 		stage('Build JAR') {

@@ -15,14 +15,13 @@ node {
         	    }
 
 
-        stage('SonarQube analysis') {
-
+        stage('SonarQube: Analysis') {
                 withSonarQubeEnv('SonarQube_Server') {
                     sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
             }
         }
 
-        stage("Quality gate") {
+        stage("SonarQube: Quality Gate") {
                 sleep(time:3,unit:"SECONDS")
                 timeout(time: 10, unit: 'MINUTES') {
                 waitForQualityGate abortPipeline: true

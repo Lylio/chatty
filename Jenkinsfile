@@ -10,6 +10,23 @@ node {
 	        	url: 'https://github.com/Lylio/chatty.git'
 	    }
 
+	    stage('Run Unit Tests') {
+        	        sh './mvnw test'
+        	    }
+
+
+        stage('SonarQube analysis') {
+
+                withSonarQubeEnv('SonarQube_Server') {
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+            }
+        }
+
+        stage("Quality gate") {
+
+                waitForQualityGate abortPipeline: true
+        }
+
 		stage('Build JAR') {
 	    	docker.image('maven:3.6.1-jdk-8').inside('-v /root/.m2:/root/.m2') {
 	        	sh 'mvn -B clean package'
@@ -17,12 +34,12 @@ node {
 	    	}
 	    }
 
-	    stage('Build Image') {
+	    stage('Build Docker Image') {
 	    	unstash 'jar'
 			app = docker.build image
 	    }
 
-	    stage('Push') {
+	    stage('Push to DockerHub') {
 	    	docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_id') {
 				app.push("${env.BUILD_NUMBER}")
 				app.push("latest")

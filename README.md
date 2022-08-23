@@ -2,7 +2,7 @@
 # Chatty
 
 ### Description
-A Spring Boot chat application. Demo can be found hosted on Heroku: https://chatty.lyle.app/ 
+A Spring Boot chat application. Demo found here: https://chatty.lyle.app/ 
 
 ### Tech Stack
 - Spring Boot (JDK 8)
